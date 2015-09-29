@@ -1,6 +1,6 @@
 {
   "name": "kj-renderer-nunjucks",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Nunjucks view rendering for the kj webapp framework.",
   "author": "Ron Elliott <ron@elliott.im>",
   "license": "ISC",
