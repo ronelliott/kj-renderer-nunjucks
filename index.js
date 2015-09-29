@@ -2,6 +2,7 @@
 
 var extend = require('extend'),
     path = require('path'),
+    prequire = require('parent-require'),
     render = require('./renderer');
 
 module.exports = function($opts) {
@@ -17,7 +18,7 @@ module.exports = function($opts) {
     }, $opts);
 
     return function($$resolver) {
-        var nunjucks = $$resolver('$nunjucks') || require('nunjucks');
+        var nunjucks = $$resolver('$nunjucks') || prequire('nunjucks');
 
         if ($opts.enabled) {
             $opts.env = $opts.env || nunjucks.configure($opts.options);
