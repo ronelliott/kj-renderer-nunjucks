@@ -1,12 +1,11 @@
 'use strict';
 
-var extend = require('extend'),
-    path = require('path'),
-    prequire = require('parent-require'),
-    render = require('./renderer');
+const path = require('path'),
+      prequire = require('parent-require'),
+      render = require('./renderer');
 
 module.exports = function($opts) {
-    $opts = extend(true, {}, {
+    $opts = Object.assign({}, {
         enabled: true,
         extension: '.html',
         inject: '$render',
